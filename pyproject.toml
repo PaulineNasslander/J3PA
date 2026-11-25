@@ -1,0 +1,59 @@
+[project]
+name = "j3pa"
+version = "0.1.0"
+description = "J3PA: self-supervised 3D representation learning on LiDAR point clouds"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "h5py==3.16.0",
+    "hdf5plugin==7.1.0",
+    "matplotlib==3.11.2",
+    "numba==0.68.1",
+    "numpy==2.5.5",
+    "pandas==2.3.3",
+    "pillow==13.0.0",
+    "pyarrow==26.0.1",
+    "pyquaternion==0.9.9",
+    "pytorch3d",
+    "scipy==1.18.1",
+    "tensorboard==2.21.0",
+    "torch==2.13.0",
+    "tqdm==4.70.1",
+    "zod==0.8.0",
+]
+
+[tool.uv.sources]
+# Prebuilt for torch 2.13.0 + CUDA 13.0 + CPython 3.12 on Linux x86_64, from PyTorch3D commit d9839a9 (after v0.7.9).
+# Built by https://github.com/MiroPsota/torch_packages_builder, so installing it needs no CUDA compiler.
+pytorch3d = { url = "https://github.com/MiroPsota/torch_packages_builder/releases/download/pytorch3d-0.7.9%2Bd9839a9/pytorch3d-0.7.9%2Bd9839a9pt2.13.0cu130-cp312-cp312-linux_x86_64.whl" }
+
+[tool.uv]
+# zod 0.8.0 imports dataclass_wizard.JSONSerializable, which dataclass-wizard 1.0 removed.
+constraint-dependencies = ["dataclass-wizard<1"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+    "ruff>=0.12.3",
+]
+
+[tool.ruff]
+line-length = 150
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]

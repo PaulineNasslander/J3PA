@@ -1,0 +1,63 @@
+J3PA
+
+This project is licensed under the Apache License, Version 2.0; see LICENSE.
+
+This repository includes third-party material, listed below with its license and copyright notice. 
+
+-------------------------------------------------------------------------------
+Apache License 2.0
+-------------------------------------------------------------------------------
+
+nuScenes devkit (https://github.com/nutonomy/nuscenes-devkit)
+  Copyright 2021 Motional.
+  Used in src/data/nuscenes_devkit_lite.py and
+  src/evaluation/nuscenes_od_metrics.py.
+
+MMDetection3D (https://github.com/atonderski/mmdetection3d)
+  Copyright 2018-2019 Open-MMLab.
+  Adapted in src/evaluation/od_post_processing.py.
+
+OpenPCDet (https://github.com/open-mmlab/OpenPCDet)
+  The PandaSet split metadata in src/data/pandaset_dataset.py is adapted from
+  its dataset configuration.
+
+*License text found in LICENSE*
+
+-------------------------------------------------------------------------------
+MIT License (license text below)
+-------------------------------------------------------------------------------
+
+Argoverse API (https://github.com/argoverse/argoverse-api)
+  Copyright (c) 2019, 2020 Argo AI, LLC.
+  Used in src/evaluation/od_metrics.py.
+
+SemanticKITTI API (https://github.com/PRBonn/semantic-kitti-api)
+  Copyright (c) 2019, University of Bonn. Authors: Andres Milioto and
+  Jens Behley; distributed via the nuScenes devkit.
+  Panoptic Quality evaluation adapted in src/evaluation/panoptic_metrics.py.
+
+LovaszSoftmax (https://github.com/bermanmaxim/LovaszSoftmax)
+  Copyright (c) 2018 Maxim Berman.
+  Lovasz extension gradient adapted in
+  src/evaluation/run_eval_bellsandwhistels.py.
+
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
