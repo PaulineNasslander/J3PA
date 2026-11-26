@@ -188,7 +188,7 @@ USE_REGISTERS_IN_PREDICTOR = False
 # PRED_QK_NORM=True
 # PRED_SDPA_GATE=True
 PRED_LEARNED_INTERPOLATION="dist_only"  # Options: "dist_and_feature", "dist_only", "dist_and_feature_diff", "None"
-PRED_NUM_NEIGHBORS=21
+PRED_NUM_NEIGHBORS=2
 PRED_NUM_OFFSETS=3
 PRED_QK_ATTN=False
 assert not (USE_REGISTERS_IN_PREDICTOR and NUM_REGISTERS == 0), "Registers can not be used in the predictor if there are no register tokens."
